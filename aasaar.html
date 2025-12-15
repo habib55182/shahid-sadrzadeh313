@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>آثار منتشر شده | شهید مصطفی صدرزاده</title>
+    <meta name="description" content="معرفی و خرید کتاب‌ها و آثار منتشر شده مرتبط با زندگی و خاطرات شهید مصطفی صدرزاده.">
+
+    <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet" type="text/css" />
+    <style>
+        /* CSS عمومی */
+        body {
+            font-family: 'Vazirmatn', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+            line-height: 1.8;
+        }
+        
+        /* هدر و منو */
+        header {
+            background-color: #1a3c34; 
+            padding: 15px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+
+        .header-content {
+            max-width: 1200px; 
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between; 
+            align-items: center; 
+        }
+
+        .logo {
+            display: flex; 
+            align-items: center;
+        }
+
+        .logo img {
+            height: 50px; 
+            width: auto;
+            vertical-align: middle;
+        }
+
+        nav {
+            flex-grow: 1; 
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.1em;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #d4af37;
+        }
+
+        /* لودینگ */
+        #loading-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #1a3c34; 
+            color: white;
+            z-index: 9999; 
+            display: none; 
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.3s ease; 
+        }
+
+        /* ساختار اصلی */
+        .container {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 20px;
+            min-height: 70vh;
+        }
+
+        .section-title {
+            text-align: center;
+            color: #1a3c34;
+            margin-bottom: 30px;
+            font-size: 2em;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #d4af37;
+            margin-top: 0;
+        }
+
+        /* گالری آثار (تغییر مجدد به گرید برای نمایش چند کتاب) */
+        .aasar-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* کمی کوچکتر برای جا شدن ۴ کتاب */
+            gap: 30px;
+            margin-top: 40px;
+            justify-content: center;
+        }
+
+        .aasar-item {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            text-align: center;
+        }
+
+        .aasar-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+
+        .book-cover {
+            height: 300px; /* ارتفاع کمی کمتر برای سازگاری با گرید */
+            overflow: hidden;
+            border-radius: 5px;
+            margin-bottom: 15px;
+        }
+
+        .book-cover img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain; /* تغییر به contain برای حفظ نسبت تصاویر طاقچه */
+            display: block;
+        }
+
+        .aasar-item h3 {
+            color: #1a3c34;
+            font-size: 1.5em;
+            margin-top: 0;
+        }
+
+        .aasar-item p {
+            color: #555;
+            text-align: justify;
+            font-size: 0.95em;
+        }
+        
+        .buy-btn {
+            display: inline-block;
+            background-color: #d4af37;
+            color: #1a3c34;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 15px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        .buy-btn:hover {
+            background-color: #bfa02e;
+        }
+
+        /* فوتر */
+        footer {
+            background-color: #222;
+            color: #aaa;
+            text-align: center;
+            padding: 20px;
+            margin-top: 50px;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="loading-overlay"></div>
+    
+    <header>
+        <div class="header-content">
+            <div class="logo right-logo">
+                <a href="index.html"><img src="logo-right.png" alt="لوگوی رسمی"></a>
+            </div>
+            
+            <nav>
+                <ul>
+                    <li><a href="index.html">صفحه اصلی</a></li>
+                    <li><a href="gallery.html">نگارخانه</a></li>
+                    <li><a href="memories.html">خاطرات</a></li>
+                    <li><a href="aasaar.html">آثار</a></li> 
+                    <li><a href="social-media.html">فضای مجازی</a></li> 
+                    <li><a href="contact.html">ارتباط با ما</a></li> 
+                </ul>
+            </nav>
+            
+            <div class="logo left-logo">
+                <a href="index.html"><img src="logo-left.png" alt="لوگوی نام جهادی"></a>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <h2 class="section-title">آثار منتشر شده</h2>
+        <p style="text-align: center; color: #555;">
+            معرفی کتاب‌هایی که تاکنون در مورد زندگی، سیره و خاطرات شهید مصطفی صدرزاده منتشر شده است.
+        </p>
+
+        <div class="aasar-grid">
+            
+            <div class="aasar-item">
+                <div class="book-cover">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvrgSXUSAg7RZWAaEKP5ljpN1BT3cIimx_Ng&s" alt="جلد کتاب سرباز روز نهم">
+                </div>
+                <h3>سرباز روز نهم</h3>
+                <p>
+                    جامع‌ترین مجموعه خاطرات و روایت‌ها از زندگی شهید مصطفی صدرزاده که به قلم نویسندگان برجسته نگارش یافته است.
+                </p>
+                <a href="#" class="buy-btn">خرید کتاب</a> 
+            </div>
+
+            <div class="aasar-item">
+                <div class="book-cover">
+                    <img src="https://img.taaghche.com/frontCover/74927.jpg?w=200" alt="جلد کتاب قرار بی قرار"> 
+                </div>
+                <h3>قرار بی قرار</h3>
+                <p>
+                    روایتی متفاوت از زندگی شهید و نحوه رسیدن او به جبهه‌های مقاومت.
+                </p>
+                <a href="https://taaghche.com/book/74927/%D9%82%D8%B1%D8%A7%D8%B1-%D8%A8%DB%8C-%D9%82%D8%B1%D8%A7%D8%B1%D8%9B-%D9%85%D8%B5%D8%B7%D9%81%DB%8C-%D8%B5%D8%AF%D8%B1-%D8%B2%D8%A7%D8%AF%D9%87-%D9%85%D8%AF%D8%A7%D9%81%D8%B9%D8%A7%D9%86-%D8%AD%D8%B1%D9%85-%DB%B5" class="buy-btn" target="_blank">خرید کتاب</a> 
+            </div>
+            
+            <div class="aasar-item">
+                <div class="book-cover">
+                    <img src="https://img.taaghche.com/frontCover/61590.jpg?w=200" alt="جلد کتاب اسم تو مصطفاست"> 
+                </div>
+                <h3>اسم تو مصطفاست</h3>
+                <p>
+                    این کتاب به خاطرات نزدیکان شهید و ابعاد کمتر شنیده شده زندگی او می‌پردازد.
+                </p>
+                <a href="https://taaghche.com/book/61590/%D8%A7%D8%B3%D9%85-%D8%AA%D9%88-%D9%85%D8%B5%D8%B7%D9%81%D8%A7%D8%B3%D8%AA" class="buy-btn" target="_blank">خرید کتاب</a> 
+            </div>
+
+            <div class="aasar-item">
+                <div class="book-cover">
+                    <img src="https://file1.cdn.faraketab.ir/content_file/content-1-26139-215792/%D8%AF%D8%B1%20%D9%85%DA%A9%D8%AA%D8%A8%20%D9%85%D8%B5%D8%B7%D9%81%DB%8C.jpg" alt="جلد کتاب در مکتب مصطفی"> 
+                </div>
+                <h3>در مکتب مصطفی</h3>
+                <p>
+                    تحلیل و بررسی سیره مدیریتی و فرماندهی شهید صدرزاده در میدان عمل.
+                </p>
+                <a href="https://www.faraketab.ir/book/26139-%D8%AF%D8%B1-%D9%85%DA%A9%D8%AA%D8%A8-%D9%85%D8%B5%D8%B7%D9%81%DB%8C" class="buy-btn" target="_blank">خرید کتاب</a> 
+            </div>
+            
+        </div>
+    </div>
+
+    <footer>
+        <p>طراحی شده جهت زنده نگه داشتن یاد و خاطره شهید مصطفی صدرزاده</p>
+        <p>۱۴۰۳ © تمامی حقوق محفوظ است.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const links = document.querySelectorAll('a[href]');
+            const loadingOverlay = document.getElementById('loading-overlay');
+            
+            links.forEach(link => {
+                const href = link.getAttribute('href');
+                // لینک‌های خرید کتاب (با target="_blank") از تأخیر مستثنی می‌شوند تا سایت‌های دیگر سریع باز شوند.
+                if (href && !href.startsWith('#') && link.target !== '_blank') { 
+                    link.addEventListener('click', function(event) {
+                        event.preventDefault(); 
+                        const targetUrl = this.href;
+                        loadingOverlay.style.display = 'flex';
+                        setTimeout(() => { loadingOverlay.style.opacity = '1'; }, 10); 
+                        setTimeout(function() { window.location.href = targetUrl; }, 1500); 
+                    });
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>

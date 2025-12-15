@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ارتباط با ما | شهید مصطفی صدرزاده</title>
+    <meta name="description" content="راه های ارتباطی با ستاد بزرگداشت شهید مصطفی صدرزاده و ارسال نظرات و پیشنهادات.">
+
+    <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet" type="text/css" />
+    <style>
+        /* CSS عمومی */
+        body {
+            font-family: 'Vazirmatn', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+            line-height: 1.8;
+        }
+        
+        /* هدر و منو */
+        header {
+            background-color: #1a3c34; 
+            padding: 15px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+
+        .header-content {
+            max-width: 1200px; 
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between; 
+            align-items: center; 
+        }
+
+        .logo {
+            display: flex; 
+            align-items: center;
+        }
+
+        .logo img {
+            height: 50px; 
+            width: auto;
+            vertical-align: middle;
+        }
+
+        nav {
+            flex-grow: 1; 
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.1em;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #d4af37;
+        }
+
+        /* لودینگ سبز لجنی */
+        #loading-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #1a3c34; 
+            color: white;
+            z-index: 9999; 
+            display: none; 
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.3s ease; 
+        }
+
+        /* استایل‌های فرم تماس */
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.05);
+        }
+
+        .section-title {
+            text-align: center;
+            color: #1a3c34;
+            margin-bottom: 30px;
+            font-size: 2em;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #d4af37;
+        }
+
+        .contact-intro {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #666;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            text-align: right;
+        }
+
+        label {
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #1a3c34;
+        }
+
+        input, textarea {
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-family: 'Vazirmatn', sans-serif;
+            font-size: 1em;
+            transition: border-color 0.3s;
+        }
+
+        input:focus, textarea:focus {
+            border-color: #d4af37;
+            outline: none;
+        }
+
+        /* استایل اختصاصی برای حالت غیرمجاز (وقتی پر نشده) */
+        input:invalid, textarea:invalid {
+            border-color: #ffdddd;
+        }
+
+        button.submit-btn {
+            background-color: #1a3c34;
+            color: white;
+            padding: 15px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1em;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin-top: 10px;
+            font-family: 'Vazirmatn', sans-serif;
+        }
+
+        button.submit-btn:hover {
+            background-color: #142e28;
+        }
+
+        footer {
+            background-color: #222;
+            color: #aaa;
+            text-align: center;
+            padding: 20px;
+            margin-top: 50px;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="loading-overlay"></div>
+    
+    <header>
+        <div class="header-content">
+            <div class="logo right-logo">
+                <a href="index.html"><img src="logo-right.png" alt="لوگوی رسمی"></a>
+            </div>
+            
+            <nav>
+                <ul>
+                    <li><a href="index.html">صفحه اصلی</a></li>
+                    <li><a href="gallery.html">نگارخانه</a></li>
+                    <li><a href="memories.html">خاطرات</a></li>
+                    <li><a href="aasaar.html">آثار</a></li> 
+                    <li><a href="social-media.html">فضای مجازی</a></li> 
+                    <li><a href="contact.html">ارتباط با ما</a></li> 
+                </ul>
+            </nav>
+            
+            <div class="logo left-logo">
+                <a href="index.html"><img src="logo-left.png" alt="لوگوی نام جهادی"></a>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <h2 class="section-title">ارتباط با ما</h2>
+        <p class="contact-intro">
+            شما می‌توانید نظرات، پیشنهادات و یا خاطرات خود را از طریق فرم زیر برای ما ارسال کنید.
+        </p>
+
+        <form action="https://formspree.io/f/mpwvkwqo" method="POST">
+            
+            <div class="form-group">
+                <label for="name">نام و نام خانوادگی <span style="color:red">*</span>:</label>
+                <input type="text" id="name" name="name" placeholder="مشخصات خود را وارد کنید" required oninvalid="this.setCustomValidity('لطفاً مشخصات خود را وارد کنید')" oninput="this.setCustomValidity('')">
+            </div>
+
+            <div class="form-group">
+                <label for="email">ایمیل (اختیاری جهت پاسخگویی):</label>
+                <input type="email" id="email" name="email" placeholder="مثال: name@example.com">
+            </div>
+
+            <div class="form-group">
+                <label for="message">متن پیام <span style="color:red">*</span>:</label>
+                <textarea id="message" name="message" rows="6" placeholder="پیام خود را اینجا بنویسید..." required oninvalid="this.setCustomValidity('لطفاً متن پیام را بنویسید')" oninput="this.setCustomValidity('')"></textarea>
+            </div>
+
+            <button type="submit" class="submit-btn">ارسال پیام</button>
+        </form>
+    </div>
+
+    <footer>
+        <p>طراحی شده جهت زنده نگه داشتن یاد و خاطره شهید مصطفی صدرزاده</p>
+        <p>۱۴۰۳ © تمامی حقوق محفوظ است.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const links = document.querySelectorAll('a[href]');
+            const loadingOverlay = document.getElementById('loading-overlay');
+            
+            links.forEach(link => {
+                const href = link.getAttribute('href');
+                if (href && !href.startsWith('#') && link.target !== '_blank') { 
+                    link.addEventListener('click', function(event) {
+                        event.preventDefault(); 
+                        const targetUrl = this.href;
+                        loadingOverlay.style.display = 'flex';
+                        setTimeout(() => { loadingOverlay.style.opacity = '1'; }, 10); 
+                        setTimeout(function() { window.location.href = targetUrl; }, 1500); 
+                    });
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>

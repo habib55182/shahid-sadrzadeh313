@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>نگارخانه تصاویر | شهید مصطفی صدرزاده</title>
+    <meta name="description" content="آرشیو تصاویر با کیفیت شهید مصطفی صدرزاده (سید ابراهیم) شامل عکس‌های شخصی، جهادی و خانوادگی با قابلیت دانلود.">
+
+    <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet" type="text/css" />
+    <style>
+        /* CSS عمومی */
+        body {
+            font-family: 'Vazirmatn', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+            line-height: 1.8;
+        }
+        
+        /* هدر و منو (Flexbox) */
+        header {
+            background-color: #1a3c34; 
+            padding: 15px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+
+        .header-content {
+            max-width: 1200px; 
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between; 
+            align-items: center; 
+        }
+
+        /* استایل لوگوها */
+        .logo {
+            display: flex; 
+            align-items: center;
+        }
+
+        .logo img {
+            height: 50px; 
+            width: auto;
+            vertical-align: middle;
+        }
+
+        /* استایل نوار ناوبری (منو) */
+        nav {
+            flex-grow: 1; 
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.1em;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #d4af37;
+        }
+
+        /* استایل‌های لودینگ سبز لجنی */
+        #loading-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #1a3c34; 
+            color: white;
+            z-index: 9999; 
+            display: none; 
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.3s ease; 
+        }
+
+        /* ساختار اصلی گالری */
+        .container {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 20px;
+            min-height: 60vh;
+        }
+
+        .section-title {
+            text-align: center;
+            color: #1a3c34;
+            margin-bottom: 30px;
+            font-size: 2em;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #d4af37;
+            margin-top: 0;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .gallery-item {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            position: relative;
+            transition: transform 0.3s;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .gallery-caption {
+            padding: 15px;
+            text-align: center;
+        }
+
+        .gallery-caption h3 {
+            margin-top: 0;
+            font-size: 1.1em;
+            color: #1a3c34;
+        }
+
+        /* دکمه دانلود */
+        .download-btn {
+            display: block;
+            background-color: #d4af37; 
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+            text-decoration: none;
+            font-size: 0.9em;
+            transition: background-color 0.3s;
+            margin-top: 10px;
+            border-radius: 5px;
+        }
+
+        .download-btn:hover {
+            background-color: #c09a2f;
+        }
+
+        /* فوتر */
+        footer {
+            background-color: #222;
+            color: #aaa;
+            text-align: center;
+            padding: 20px;
+            margin-top: 50px;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="loading-overlay">
+    </div>
+    
+    <header>
+        <div class="header-content">
+            <div class="logo right-logo">
+                <a href="index.html"><img src="logo-right.png" alt="لوگوی رسمی"></a>
+            </div>
+            
+            <nav>
+                <ul>
+                    <li><a href="index.html">صفحه اصلی</a></li>
+                    <li><a href="gallery.html">نگارخانه</a></li>
+                    <li><a href="memories.html">خاطرات</a></li>
+                    <li><a href="aasaar.html">آثار</a></li> 
+                    <li><a href="social-media.html">فضای مجازی</a></li> 
+                    <li><a href="contact.html">ارتباط با ما</a></li> 
+                </ul>
+            </nav>
+            
+            <div class="logo left-logo">
+                <a href="index.html"><img src="logo-left.png" alt="لوگوی نام جهادی"></a>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <h2 class="section-title">نگارخانه تصاویر</h2>
+        <p style="text-align: center; color: #555; margin-bottom: 40px;">
+            تصاویر منتخب شهید مصطفی صدرزاده با کیفیت بالا و قابلیت دانلود مستقیم.
+        </p>
+
+        <div class="gallery-grid">
+            
+            <div class="gallery-item">
+                <img src="https://idc0-cdn0.khamenei.ir/ndata/news/53595/C/14020518_0153595.jpg" alt="تصویر شهید صدرزاده در لباس رزم">
+                <div class="gallery-caption">
+                    <h3>تصویر در لباس رزم</h3>
+                    <a href="placeholder-1.jpg" download class="download-btn">دانلود با کیفیت بالا</a>
+                </div>
+            </div>
+
+            <div class="gallery-item">
+                 <img src="file:///C:/Users/salh/Desktop/Shahid_Sadrzadeh/placeholder-profile-pic.jpg.jpg" alt="تصویر خانوادگی شهید">
+                <div class="gallery-caption">
+                    <h3>عکس خانوادگی</h3>
+                    <a href="placeholder-2.jpg" download class="download-btn">دانلود با کیفیت بالا</a>
+                </div>
+            </div>
+            
+            <div class="gallery-item">
+                 <img src="placeholder-3.jpg" alt="تصویر شهید در دوران کودکی">
+                <div class="gallery-caption">
+                    <h3>دوران کودکی و نوجوانی</h3>
+                    <a href="file:///C:/Users/salh/Desktop/Shahid_Sadrzadeh/placeholder-4.jpg.jpg" download class="download-btn">دانلود با کیفیت بالا</a>
+                </div>
+            </div>
+
+            <div class="gallery-item">
+                 <img src="placeholder-4.jpg" alt="تصویر شهید صدرزاده با همرزمان">
+                <div class="gallery-caption">
+                    <h3>کنار همرزمان</h3>
+                    <a href="placeholder-4.jpg" download class="download-btn">دانلود با کیفیت بالا</a>
+                </div>
+            </div>
+
+        </div>
+        
+    </div>
+
+    <footer>
+        <p>طراحی شده جهت زنده نگه داشتن یاد و خاطره شهید مصطفی صدرزاده</p>
+        <p>۱۴۰۳ © تمامی حقوق محفوظ است.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const links = document.querySelectorAll('a[href]');
+            const loadingOverlay = document.getElementById('loading-overlay');
+            
+            links.forEach(link => {
+                const href = link.getAttribute('href');
+                // مطمئن می‌شویم لینک داخلی است و هدف آن صفحه جدید (target="_blank") نیست
+                if (href && !href.startsWith('#') && link.target !== '_blank') { 
+                    
+                    link.addEventListener('click', function(event) {
+                        event.preventDefault(); 
+                        const targetUrl = this.href;
+                        
+                        // ۱. نمایش صفحه لودینگ سبز
+                        loadingOverlay.style.display = 'flex';
+                        setTimeout(() => {
+                            loadingOverlay.style.opacity = '1';
+                        }, 10); 
+
+                        // ۲. اعمال تأخیر ۱۵۰۰ میلی‌ثانیه (۱.۵ ثانیه)
+                        setTimeout(function() {
+                            window.location.href = targetUrl;
+                        }, 1500); 
+                    });
+                }
+            });
+        });
+    </script>
+    </body>
+</html>

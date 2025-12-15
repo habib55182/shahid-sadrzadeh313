@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>فضای مجازی | شهید مصطفی صدرزاده</title>
+    <meta name="description" content="لینک‌های رسمی شهید مصطفی صدرزاده در شبکه‌های اجتماعی داخلی و خارجی شامل ایتا، روبیکا و ...">
+    
+    <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet" type="text/css" />
+    <style>
+        /* CSS عمومی */
+        body {
+            font-family: 'Vazirmatn', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+            line-height: 1.8;
+        }
+        
+        /* هدر و منو (Flexbox) */
+        header {
+            background-color: #1a3c34; 
+            padding: 15px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+
+        .header-content {
+            max-width: 1200px; 
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between; 
+            align-items: center; 
+        }
+
+        /* استایل لوگوها */
+        .logo {
+            display: flex; 
+            align-items: center;
+        }
+
+        .logo img {
+            height: 50px; 
+            width: auto;
+            vertical-align: middle;
+        }
+
+        /* استایل نوار ناوبری (منو) */
+        nav {
+            flex-grow: 1; 
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.1em;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #d4af37;
+        }
+
+        /* استایل‌های لودینگ سبز لجنی */
+        #loading-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #1a3c34; 
+            color: white;
+            z-index: 9999; 
+            display: none; 
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.3s ease; 
+        }
+
+        /* ساختار اصلی صفحه */
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 20px;
+            min-height: 70vh;
+        }
+
+        .section-title {
+            text-align: center;
+            color: #1a3c34;
+            margin-bottom: 30px;
+            font-size: 2em;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #d4af37;
+            margin-top: 0;
+        }
+
+        .hero-image-social {
+            display: block;
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 50%;
+            margin: 0 auto 30px;
+            border: 5px solid #d4af37;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .social-links {
+            display: flex;
+            flex-direction: column; 
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        .social-item {
+            display: flex;
+            align-items: center;
+            background-color: white;
+            padding: 15px 25px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            transition: transform 0.2s, box-shadow 0.2s;
+            text-decoration: none;
+            color: #333;
+        }
+
+        .social-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+        }
+
+        .social-item img {
+            width: 40px; 
+            height: 40px;
+            margin-left: 20px; 
+            border-radius: 50%; /* لوگوها را گرد نمایش می‌دهد */
+        }
+
+        .social-text {
+            flex-grow: 1;
+        }
+
+        .social-text h3 {
+            margin: 0;
+            font-size: 1.2em;
+            color: #1a3c34;
+        }
+
+        .social-text p {
+            margin: 0;
+            font-size: 0.9em;
+            color: #777;
+        }
+        
+        .social-item .icon-arrow {
+            font-size: 1.5em;
+            color: #d4af37;
+            margin-right: 10px;
+        }
+
+
+        /* فوتر */
+        footer {
+            background-color: #222;
+            color: #aaa;
+            text-align: center;
+            padding: 20px;
+            margin-top: 50px;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="loading-overlay">
+    </div>
+    
+    <header>
+        <div class="header-content">
+            <div class="logo right-logo">
+                <a href="index.html"><img src="logo-right.png" alt="لوگوی رسمی"></a>
+            </div>
+            
+            <nav>
+                <ul>
+                    <li><a href="index.html">صفحه اصلی</a></li>
+                    <li><a href="gallery.html">نگارخانه</a></li>
+                    <li><a href="memories.html">خاطرات</a></li>
+                    <li><a href="aasaar.html">آثار</a></li> 
+                    <li><a href="social-media.html">فضای مجازی</a></li> 
+                    <li><a href="contact.html">ارتباط با ما</a></li> 
+                </ul>
+            </nav>
+            
+            <div class="logo left-logo">
+                <a href="index.html"><img src="logo-left.png" alt="لوگوی نام جهادی"></a>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <h2 class="section-title">فضای مجازی و رسانه‌های رسمی</h2>
+        <p style="text-align: center; color: #555; margin-bottom: 30px;">
+            برای دنبال کردن اخبار و محتوای منتشر شده از شهید، می‌توانید صفحات رسمی زیر را دنبال کنید.
+        </p>
+        
+        <img src="https://hedayatmizan.ir/server/php/files/938/19810/images/5e402b592d6c3.jpg" alt="تصویر شهید مصطفی صدرزاده" class="hero-image-social">
+
+        <div class="social-links">
+            
+            <a href="https://eitaa.com/meslemostafaa" class="social-item" target="_blank">
+                <img src="http://s6.picofile.com/file/8389773818/13.png" alt="لوگوی ایتا">
+                <div class="social-text">
+                    <h3>کانال رسمی ایتا</h3>
+                    <p>جدیدترین محتوا و اطلاع‌رسانی‌ها</p>
+                </div>
+                <span class="icon-arrow">←</span>
+            </a>
+            
+            <a href="https://rubika.ir/meslemostafaa" class="social-item" target="_blank">
+                <img src="https://rubika.ir/static/images/logos/minimal/minimal-black.png" alt="لوگوی روبیکا">
+                <div class="social-text">
+                    <h3>صفحه رسمی روبیکا</h3>
+                    <p>پخش زنده و آرشیو ویدیوهای کوتاه</p>
+                </div>
+                <span class="icon-arrow">←</span>
+            </a>
+            
+            </div>
+        
+    </div>
+
+    <footer>
+        <p>طراحی شده جهت زنده نگه داشتن یاد و خاطره شهید مصطفی صدرزاده</p>
+        <p>۱۴۰۳ © تمامی حقوق محفوظ است.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const links = document.querySelectorAll('a[href]');
+            const loadingOverlay = document.getElementById('loading-overlay');
+            
+            links.forEach(link => {
+                const href = link.getAttribute('href');
+                // مطمئن می‌شویم لینک داخلی است و هدف آن صفحه جدید (target="_blank") نیست
+                if (href && !href.startsWith('#') && link.target !== '_blank') { 
+                    
+                    link.addEventListener('click', function(event) {
+                        event.preventDefault(); 
+                        const targetUrl = this.href;
+                        
+                        // ۱. نمایش صفحه لودینگ سبز
+                        loadingOverlay.style.display = 'flex';
+                        setTimeout(() => {
+                            loadingOverlay.style.opacity = '1';
+                        }, 10); 
+
+                        // ۲. اعمال تأخیر ۱۵۰۰ میلی‌ثانیه (۱.۵ ثانیه)
+                        setTimeout(function() {
+                            window.location.href = targetUrl;
+                        }, 1500); 
+                    });
+                }
+            });
+        });
+    </script>
+    </body>
+</html>

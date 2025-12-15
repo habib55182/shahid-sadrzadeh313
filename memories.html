@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>خاطرات | شهید مصطفی صدرزاده</title>
+    <meta name="description" content="مجموعه‌ای از خاطرات کوتاه و خواندنی از خانواده، هم‌رزمان و دوستان شهید مدافع حرم مصطفی صدرزاده (سید ابراهیم).">
+    
+    <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet" type="text/css" />
+    <style>
+        /* CSS عمومی */
+        body {
+            font-family: 'Vazirmatn', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+            line-height: 1.8;
+        }
+        
+        /* هدر و منو (Flexbox) */
+        header {
+            background-color: #1a3c34; 
+            padding: 15px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+
+        .header-content {
+            max-width: 1200px; 
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between; 
+            align-items: center; 
+        }
+
+        /* استایل لوگوها */
+        .logo {
+            display: flex; 
+            align-items: center;
+        }
+
+        .logo img {
+            height: 50px; 
+            width: auto;
+            vertical-align: middle;
+        }
+
+        /* استایل نوار ناوبری (منو) */
+        nav {
+            flex-grow: 1; 
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.1em;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #d4af37;
+        }
+
+        /* استایل‌های لودینگ سبز لجنی */
+        #loading-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #1a3c34; 
+            color: white;
+            z-index: 9999; 
+            display: none; 
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.3s ease; 
+        }
+
+        /* ساختار اصلی خاطرات */
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 20px;
+            min-height: 60vh;
+        }
+
+        .section-title {
+            text-align: center;
+            color: #1a3c34;
+            margin-bottom: 30px;
+            font-size: 2em;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #d4af37;
+            margin-top: 0;
+        }
+        
+        /* استایل بلوک خاطرات */
+        .memory-block {
+            background-color: white;
+            padding: 30px;
+            margin-bottom: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            border-right: 5px solid #d4af37; 
+        }
+        
+        .memory-quote {
+            font-size: 1.15em;
+            font-style: italic;
+            margin-bottom: 15px;
+            color: #1a3c34;
+            position: relative;
+            padding-right: 20px;
+        }
+        
+        /* علامت نقل قول */
+        .memory-quote:before {
+            content: "\201C"; 
+            font-size: 3em;
+            color: #d4af37;
+            position: absolute;
+            top: -10px;
+            right: 0;
+            line-height: 1;
+        }
+        
+        .memory-source {
+            font-size: 0.9em;
+            color: #555;
+            text-align: left; 
+            border-top: 1px dashed #eee;
+            padding-top: 10px;
+            margin-top: 15px;
+        }
+        
+        /* دکمه عمومی */
+        .btn {
+            display: inline-block;
+            background-color: #1a3c34;
+            color: white;
+            padding: 10px 25px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 20px;
+            transition: background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #142e28;
+        }
+
+
+        /* فوتر */
+        footer {
+            background-color: #222;
+            color: #aaa;
+            text-align: center;
+            padding: 20px;
+            margin-top: 50px;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="loading-overlay">
+    </div>
+    
+    <header>
+        <div class="header-content">
+            <div class="logo right-logo">
+                <a href="index.html"><img src="logo-right.png" alt="لوگوی رسمی"></a>
+            </div>
+            
+            <nav>
+                <ul>
+                    <li><a href="index.html">صفحه اصلی</a></li>
+                    <li><a href="gallery.html">نگارخانه</a></li>
+                    <li><a href="memories.html">خاطرات</a></li>
+                    <li><a href="aasaar.html">آثار</a></li> 
+                    <li><a href="social-media.html">فضای مجازی</a></li> 
+                    <li><a href="contact.html">ارتباط با ما</a></li> 
+                </ul>
+            </nav>
+            
+            <div class="logo left-logo">
+                <a href="index.html"><img src="logo-left.png" alt="لوگوی نام جهادی"></a>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <h2 class="section-title">خاطرات شهید مصطفی صدرزاده</h2>
+        <p style="text-align: center; color: #555; margin-bottom: 40px;">
+            منتخبی از خاطرات کوتاه خانواده، هم‌رزمان و دوستان شهید مصطفی صدرزاده.
+        </p>
+
+        <div class="memory-block">
+            <div class="memory-quote">
+                هم‌محله‌ای مصطفی بودم، چشمم که به مصطفی می‌افتاد با خودم می‌گفتم: «آخ‌آخ! این از اون خشک‌مقدس‌هاست! خدا نکنه قلابش به آدم بگیره! از این گیرِ سه‌پیچ‌هاست!» اما بیشتر که شناختمش نظرم عوض شد. دیدم مصطفی برای خودش دنیایی است. آن موقع فرماندهٔ پایگاه ملت۱ بود و من در حوزهٔ بسیج حربن‌ریاحی فعال بودم. بعد از اهانت به مزار حجر بن‌ عدی در سوریه شنیدم که مصطفی به سوریه رفته است. من هم دلم می‌خواست بروم و جبهه را از نزدیک ببینم. به یکی از دوستان مشترکمان گفتم: «تو با مصطفی رفیقی. برو باهاش صحبت کن ببین می‌شه منو هم ببره؟» با مصطفی صحبت کرد. یک روز با او قرار گذاشت و دیدمش. مصطفی گفت: «جنگه، ممکنه مجروح بشی، قطع عضو یا قطع‌نخاع بشی، شهید بشی یا اصلاً اسیر بشی و برنگردی. این جور چیزا رو داره‌ها.» گفتم: «من مشکلی ندارم.» عادت داشت استخاره بگیرد. گرفت و گفت: «بُزُرقوا! باید با پدرت صحبت کنم.» این کلمه را به‌جای بزرگوار به‌کار می‌برد. با پدرم که حرف زد او گفت: «خودش می‌دونه که چی به چیه. من حرفی ندارم.» گرچه که عشق آسان نمود اول، اما سروکلهٔ مشکل‌ها پیدا شد. من سربازی نرفته بودم. مصطفی هم نرفته بود، اما پول نقد گذاشته بود برای وثیقه. من اما سر کار نمی‌رفتم و هیچ پولی نداشتم. بیست‌ویک سالم بود و دیگر از پدرم هم پولی نمی‌گرفتم. برای خروج از کشور هم نامهٔ یکی از شرکت‌های مسافرتی لازم بود. بالاخره مشکلات هم یکی‌یکی حل شد. پولی به دستم رسید و مسئلهٔ وثیقه و ویزا حل شد. نامه‌ای هم از هتل دایی مصطفی گرفتم. قرار شد من و مصطفی و چند نفر از دوستانش به عراق برویم. مصطفی با مسعود در ایامی که لواء امام‌حسین (ع) بودند، با آنها صحبت کرده بودند. آنها هم گفته بودند شما به عراق بیایید، ما آنجا کارهایتان را هماهنگ می‌کنیم که به سوریه بروید..
+            </div>
+            <div class="memory-source">
+                راوی: خیبر
+            </div>
+        </div>
+        
+        <div class="memory-block">
+            <div class="memory-quote">
+                یک بار به من گفت: «اگر می‌خواهی پیشرفت کنی، هر وقت کسی بهت انتقاد کرد، سریع قبول کن. در عمل بهش نشان بده که چقدر گوش دادی.» این یکی از درس‌های مهم زندگی‌اش بود که همیشه به آن عمل می‌کرد.
+            </div>
+            <div class="memory-source">
+                راوی: شهید عطایی
+            </div>
+        </div>
+        
+        <div class="memory-block">
+            <div class="memory-quote">
+                می‌گفت وقتی برای بار اول به سوریه رفت، چون ظاهرش کم سن و سال بود، کسی او را جدی نمی‌گرفت. مجبور شد مدتی با نام یک تبعه افغانستانی در لشکر فاطمیون ثبت نام کند تا بتواند وارد عملیات شود. او عشق عجیبی به گمنامی داشت.
+            </div>
+            <div class="memory-source">
+                راوی: دوست دوران دانشگاه
+            </div>
+        </div>
+
+        <div class="memory-block">
+            <div class="memory-quote">
+                در سخت‌ترین شرایط درگیری و در خط مقدم، لحظه‌ای دست از شوخ‌طبعی برنمی‌داشت. این ویژگی‌اش باعث می‌شد ترس از بچه‌ها دور شود و روحیه حماسی در نیروها زنده بماند. همیشه می‌گفت: «خنده، بهترین سلاح ماست.»
+            </div>
+            <div class="memory-source">
+                راوی: یکی از نیروهای تحت امر
+            </div>
+        </div>
+
+        <div class="memory-block">
+            <div class="memory-quote">
+                وقتی به سوریه می‌رفت، هیچ وقت به ما نمی‌گفت دقیقاً چه کار می‌کند. می‌گفت: «من می‌روم کارگری، پول دربیاورم تا زندگی راحت شود.» در حالی که فرماندهی یکی از حساس‌ترین گردان‌ها را به عهده داشت. او از تظاهر بیزار بود.
+            </div>
+            <div class="memory-source">
+                راوی: مادر شهید
+            </div>
+        </div>
+        
+        <div class="memory-block">
+            <div class="memory-quote">
+                یک بار در عملیات دستش زخمی شده بود و دکتر اصرار داشت که استراحت کند. مصطفی با دست بانداژ شده، به جای استراحت، شروع به توزیع غذا بین رزمنده‌ها کرد و گفت: «این زخم مانع خدمت من نمی‌شود.»
+            </div>
+            <div class="memory-source">
+                راوی: پزشک صحرایی
+            </div>
+        </div>
+
+        <div class="memory-block">
+            <div class="memory-quote">
+                همیشه تأکید داشت که رزمندگان نباید به پست و مقام دل ببندند. می‌گفت: «ما باید هر لحظه آماده باشیم که کلاه فرماندهی را بگذاریم و برویم ته صف، ظرف بشوییم. اخلاص همین است.»
+            </div>
+            <div class="memory-source">
+                راوی: همرزم در قرارگاه
+            </div>
+        </div>
+
+        <div class="memory-block">
+            <div class="memory-quote">
+                نظم و وقت‌شناسی‌اش زبانزد بود. در منطقه‌ای که همه چیز در هرج و مرج بود، او برنامه‌ریزی دقیق برای هر نیرو داشت. می‌گفت: «کار برای خدا هم باید منظم باشد، چون خدا از همه چیز بهتر است.»
+            </div>
+            <div class="memory-source">
+                راوی: معاون گردان
+            </div>
+        </div>
+        
+        <div class="memory-block">
+            <div class="memory-quote">
+                آخرین بار که از خانه رفت، دختر کوچکش، زهرا سادات، خیلی بی‌قراری می‌کرد. مصطفی به من گفت: «من می‌روم برای دفاع از حرم عمه‌اش (حضرت زینب سلام الله علیها). اگر کاری بهتر از این بود، نمی‌رفتم.»
+            </div>
+            <div class="memory-source">
+                راوی: همسر شهید
+            </div>
+        </div>
+
+        <div class="memory-block">
+            <div class="memory-quote">
+                در مورد حجاب و عفاف به خواهران بسیجی می‌گفت: «حجاب شما، پرچم اصلی ما در این جنگ فرهنگی است. محکم باشید و نگذارید دشمن پرچم را پایین بیاورد.» این جمله را همیشه با غیرت خاصی بیان می‌کرد.
+            </div>
+            <div class="memory-source">
+                راوی: خواهر بسیجی
+            </div>
+        </div>
+        
+        <div class="memory-block">
+            <div class="memory-quote">
+                بسیار به نماز اول وقت اهمیت می‌داد. حتی در دل آتش و در شرایطی که دشمن نزدیک بود، نمازش را بدون تأخیر و با آرامش می‌خواند. می‌گفت: «فرمانده واقعی ما خداست، اولویت با فرمانده است.»
+            </div>
+            <div class="memory-source">
+                راوی: یکی از محافظین او در سوریه
+            </div>
+        </div>
+
+        <div class="memory-block">
+            <div class="memory-quote">
+                حسینیه شهدا کهنز را او مدیریت میکرد .»
+            </div>
+            <div class="memory-source">
+                راوی: بچه های کهنز
+            </div>
+        </div>
+        
+        <div style="text-align: center; margin-top: 50px;">
+            <a href="contact.html" class="btn">ارسال خاطرات شما</a>
+        </div>
+        
+    </div>
+
+    <footer>
+        <p>طراحی شده جهت زنده نگه داشتن یاد و خاطره شهید مصطفی صدرزاده</p>
+        <p>۱۴۰۳ © تمامی حقوق محفوظ است.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const links = document.querySelectorAll('a[href]');
+            const loadingOverlay = document.getElementById('loading-overlay');
+            
+            links.forEach(link => {
+                const href = link.getAttribute('href');
+                if (href && !href.startsWith('#') && link.target !== '_blank') { 
+                    
+                    link.addEventListener('click', function(event) {
+                        event.preventDefault(); 
+                        const targetUrl = this.href;
+                        
+                        // ۱. نمایش صفحه لودینگ سبز
+                        loadingOverlay.style.display = 'flex';
+                        setTimeout(() => {
+                            loadingOverlay.style.opacity = '1';
+                        }, 10); 
+
+                        // ۲. اعمال تأخیر ۱۵۰۰ میلی‌ثانیه (۱.۵ ثانیه)
+                        setTimeout(function() {
+                            window.location.href = targetUrl;
+                        }, 1500); 
+                    });
+                }
+            });
+        });
+    </script>
+    </body>
+</html>

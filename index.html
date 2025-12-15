@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>سایت رسمی شهید مصطفی صدرزاده | سید ابراهیم</title>
+    <meta name="description" content="سایت رسمی بزرگداشت و نشر آثار شهید مصطفی صدرزاده (سید ابراهیم). شامل خاطرات روزانه، نگارخانه تصاویر، آثار و محتوای مجازی.">
+
+    <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet" type="text/css" />
+    <style>
+        /* CSS عمومی */
+        body {
+            font-family: 'Vazirmatn', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+            line-height: 1.8;
+        }
+        
+        /* هدر و منو (Flexbox) */
+        header {
+            background-color: #1a3c34; /* سبز لجنی */
+            padding: 15px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+            position: relative; /* برای حفظ ترتیب */
+        }
+
+        .header-content {
+            max-width: 1200px; 
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between; 
+            align-items: center; 
+        }
+
+        /* استایل لوگوها */
+        .logo {
+            display: flex; 
+            align-items: center;
+        }
+
+        .logo img {
+            height: 50px; 
+            width: auto;
+            vertical-align: middle;
+        }
+
+        /* استایل نوار ناوبری (منو) */
+        nav {
+            flex-grow: 1; 
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.1em;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #d4af37; /* طلایی روشن */
+        }
+
+        /* استایل‌های لودینگ سبز لجنی */
+        #loading-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #1a3c34; /* سبز لجنی */
+            color: white;
+            z-index: 9999; 
+            display: none; 
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.3s ease; 
+        }
+
+        /* اسلایدر (Hero Section) */
+        .hero-section {
+            position: relative;
+            width: 100%;
+            height: 550px; 
+            overflow: hidden;
+        }
+
+        .slide {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+            background-size: cover;
+            background-position: center;
+            filter: brightness(70%); /* تیره کردن عکس برای بهتر دیده شدن متن */
+        }
+
+        .slide.active {
+            opacity: 1;
+        }
+
+        .hero-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            text-align: center;
+            z-index: 10;
+        }
+
+        .hero-text h1 {
+            font-size: 3.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+        }
+
+        .hero-text p {
+            font-size: 1.5em;
+            margin-top: 0;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+        }
+
+        /* ساختار اصلی محتوا */
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            color: #1a3c34;
+            margin-bottom: 30px;
+            font-size: 2em;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #d4af37;
+            margin-top: 0;
+        }
+
+        .about-shahid {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            margin-bottom: 40px;
+        }
+        
+        /* دکمه عمومی */
+        .btn {
+            display: inline-block;
+            background-color: #1a3c34;
+            color: white;
+            padding: 10px 25px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 20px;
+            transition: background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #142e28;
+        }
+
+        /* فوتر */
+        footer {
+            background-color: #222;
+            color: #aaa;
+            text-align: center;
+            padding: 20px;
+            margin-top: 50px;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="loading-overlay">
+    </div>
+    
+    <header>
+        <div class="header-content">
+            <div class="logo right-logo">
+                <a href="index.html"><img src="file:///C:/Users/salh/Desktop/Shahid_Sadrzadeh/2598.png" alt="لوگوی رسمی"></a>
+            </div>
+            
+            <nav>
+                <ul>
+                    <li><a href="index.html">صفحه اصلی</a></li>
+                    <li><a href="gallery.html">نگارخانه</a></li>
+                    <li><a href="memories.html">خاطرات</a></li>
+                    <li><a href="aasaar.html">آثار</a></li> 
+                    <li><a href="social-media.html">فضای مجازی</a></li> 
+                    <li><a href="contact.html">ارتباط با ما</a></li> 
+                </ul>
+            </nav>
+            
+            <div class="logo left-logo">
+                <a href="index.html"><img src="file:///C:/Users/salh/Desktop/Shahid_Sadrzadeh/587.png" alt="لوگوی نام جهادی"></a>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero-section">
+        <div class="slide active" style="background-image: url('https://khaledin.com/wp-content/uploads/2021/12/%D8%B4%D9%87%DB%8C%D8%AF-%D9%85%D8%B5%D8%B7%D9%81%DB%8C-%D8%B5%D8%AF%D8%B1%D8%B2%D8%A7%D8%AF%D9%87-%D8%B3%DB%8C%D8%AF-%D8%A7%D8%A8%D8%B1%D8%A7%D9%87%DB%8C%D9%85.jpg');"></div> 
+        
+        <div class="slide" style="background-image: url('https://mighatmedia.com/wp-content/uploads/2023/10/46-%D8%B4%D9%87%DB%8C%D8%AF-%D9%85%D8%B5%D8%B7%D9%81%DB%8C-%D8%B5%D8%AF%D8%B1-%D8%B2%D8%A7%D8%AF%D9%87-%D8%A7%DB%8C%D9%86%D8%AC%D8%A7-%D8%A2%D8%AE%D8%B1-%D8%AF%D9%86%DB%8C%D8%A7%D8%B3%D8%AA-1.jpg');"></div>
+        
+        <div class="slide" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWhKr3iAhXl46AWojw7muINTI7Fip-PXfN0w&s');"></div>
+        
+        <div class="slide" style="background-image: url('file:///C:/Users/salh/Desktop/Shahid_Sadrzadeh/hero-2.jpg.png');"></div>
+
+        <div class="hero-text">
+            <h1>ســیــد ابراهــیــم</h1>
+            <p>شهید مدافع حرم مصطفی صدرزاده</p>
+        </div>
+    </section>
+
+    <div class="container">
+        
+        <h2 class="section-title">درباره شهید</h2>
+
+        <div class="about-shahid">
+            <p style="font-size: 1.1em; text-align: justify;">
+                شهید مصطفی صدرزاده (متولد ۱۹ شهریور ۱۳۶۴ – شهادت ۱ آبان ۱۳۹۴) با نام جهادی سید ابراهیم، یکی از فرماندهان جوان و مؤثر مدافع حرم بود. او با وجود مخالفت‌های اولیه برای اعزام، توانست ابتدا با نام یک تبعه افغانستانی وارد فاطمیون شود و پس از اثبات توانمندی‌ها و اخلاصش، فرماندهی گردان عمار و جانشین فرمانده تیپ فاطمیون در سوریه شد. او در روز تاسوعای حسینی سال ۱۳۹۴ در جریان عملیات محرم در حومه حلب به شهادت رسید. 
+            </p>
+            <p style="font-size: 1.1em; text-align: justify;">
+                مصطفی صدرزاده نمونه بارزی از یک بسیجی مخلص و کارآمد بود که با روحیه جهادی، دلسوزی نسبت به نیروهای تحت امر و تواضع مثال‌زدنی، توانست در دل رزمندگان و مردم جای باز کند. این وب‌سایت به منظور زنده نگه داشتن یاد، خاطره و ترویج راه ایشان ایجاد شده است.
+            </p>
+            <div style="text-align: center;">
+                <a href="memories.html" class="btn">خاطرات بیشتر</a>
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>طراحی شده جهت زنده نگه داشتن یاد و خاطره شهید مصطفی صدرزاده</p>
+        <p>۱۴۰۳ © تمامی حقوق محفوظ است.</p>
+    </footer>
+
+    <script>
+        let slideIndex = 0;
+        const slides = document.querySelectorAll('.slide');
+        
+        function showSlides() {
+            // مخفی کردن همه اسلایدها
+            slides.forEach(slide => {
+                slide.classList.remove('active');
+            });
+
+            // افزایش شاخص
+            slideIndex++;
+            if (slideIndex > slides.length) {
+                slideIndex = 1;
+            }
+
+            // نمایش اسلاید جاری
+            slides[slideIndex - 1].classList.add('active');
+            
+            // تکرار خودکار هر ۶ ثانیه
+            setTimeout(showSlides, 6000); 
+        }
+
+        // شروع اسلایدشو
+        document.addEventListener('DOMContentLoaded', showSlides);
+    </script>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const links = document.querySelectorAll('a[href]');
+            const loadingOverlay = document.getElementById('loading-overlay');
+            
+            links.forEach(link => {
+                const href = link.getAttribute('href');
+                // مطمئن می‌شویم لینک داخلی است و هدف آن صفحه جدید (target="_blank") نیست
+                if (href && !href.startsWith('#') && link.target !== '_blank') { 
+                    
+                    link.addEventListener('click', function(event) {
+                        event.preventDefault(); 
+                        const targetUrl = this.href;
+                        
+                        // ۱. نمایش صفحه لودینگ سبز
+                        loadingOverlay.style.display = 'flex';
+                        setTimeout(() => {
+                            loadingOverlay.style.opacity = '1';
+                        }, 10); 
+
+                        // ۲. اعمال تأخیر ۱۵۰۰ میلی‌ثانیه (۱.۵ ثانیه)
+                        setTimeout(function() {
+                            window.location.href = targetUrl;
+                        }, 1500); 
+                    });
+                }
+            });
+        });
+    </script>
+    </body>
+</html>
