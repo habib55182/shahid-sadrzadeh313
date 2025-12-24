@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>سایت رسمی شهید مصطفی صدرزاده | سید ابراهیم</title>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+    <link rel="preconnect" href="https://raw.githubusercontent.com">
     <meta name="description" content="سایت رسمی بزرگداشت و نشر آثار شهید مصطفی صدرزاده (سید ابراهیم). شامل خاطرات روزانه، نگارخانه تصاویر، آثار و محتوای مجازی.">
 
     <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet" type="text/css" />
@@ -111,6 +113,7 @@
             background-size: cover;
             background-position: center;
             filter: brightness(70%); /* تیره کردن عکس برای بهتر دیده شدن متن */
+            will-change: opacity;
         }
 
         .slide.active {
@@ -220,7 +223,7 @@
     </header>
 
     <section class="hero-section">
-        <div class="slide active" style="background-image: url('https://raw.githubusercontent.com/habib55182/shahid-sadrzadeh313/refs/heads/main/hero-2.jpg.png');"></div> 
+        <div class="slide active" style="background-image: url('https://raw.githubusercontent.com/habib55182/shahid-sadrzadeh313/refs/heads/main/hero-2.jpg.png');" fetchpriority="high"></div> > 
         
         <div class="slide" style="background-image: url('https://raw.githubusercontent.com/habib55182/shahid-sadrzadeh313/refs/heads/main/sahid%20(1).jpg');"></div>
         
@@ -308,7 +311,7 @@
                         // ۲. اعمال تأخیر ۱۵۰۰ میلی‌ثانیه (۱.۵ ثانیه)
                         setTimeout(function() {
                             window.location.href = targetUrl;
-                        }, 1500); 
+                        }, 800); 
                     });
                 }
             });
@@ -316,6 +319,7 @@
     </script>
     </body>
 </html>
+
 
 
 
